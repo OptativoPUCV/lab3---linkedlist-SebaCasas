@@ -98,8 +98,8 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-  list->current->next = list->current->prev;
-  list->current->prev = list->current->next;
+  list->current->next->prev = NULL;
+  list->head = list->current->next;
   return list->current->data;
   list->current = list->current->next;
 }
