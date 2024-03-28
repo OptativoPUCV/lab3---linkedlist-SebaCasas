@@ -59,11 +59,10 @@ void * lastList(List * list) {
 }
 
 void * prevList(List * list) {
-  while(list->current->next != NULL){
-    list->current = list->current->next;
-  }
-  list->current = list->current->prev;
-  return list->current->data;
+  if(list->current->prev != NULL){
+    list->current = list->current->prev;
+    return list->current;}
+  return NULL;
 }
 
 void pushFront(List * list, void * data) {
