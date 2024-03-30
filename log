@@ -202,3 +202,15 @@ Sat 30 Mar 2024 07:53:02 PM UTC:
  1 file changed, 2 insertions(+), 3 deletions(-)
  tests:  0|0
 5061928
+Sat 30 Mar 2024 07:57:35 PM UTC: 
+ list.c | 19 +++++++++++++++----
+ 1 file changed, 15 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:105:7: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+  105 |   if (current->prev == NULL) {
+      |       ^~~~~~~
+      |       popCurrent
+list.c:105:7: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+4e43133
